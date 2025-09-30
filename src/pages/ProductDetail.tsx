@@ -103,7 +103,7 @@ const products: Record<string, Product> = {
     price: "₹1,24,900",
     priceNumber: 124900,
     description: "Ampere Powered by Greaves Electric Mobility Nexus ST High Performance Family Electric Scooter with Portable Charger. Designed for modern families seeking reliable and efficient electric mobility with premium features and excellent build quality.",
-    image: "/ac/d.jpg",
+    image: "/ac/d.jpeg",
     specs: {
       motor: "BLDC Hub Motor",
       battery: "Lithium-Ion Battery",
@@ -127,7 +127,7 @@ const products: Record<string, Product> = {
     price: "₹50,099",
     priceNumber: 50099,
     description: "EOX E2 Low Speed Electric Scooter Non RTO with 60-80Km Range. Features red portable lithium battery and charger for convenient charging. Perfect for city commuting without registration requirements.",
-    image: "/ac/e.jpg",
+    image: "/ac/e.jpeg",
     specs: {
       motor: "BLDC Motor",
       battery: "Portable Lithium-Ion",
@@ -151,7 +151,7 @@ const products: Record<string, Product> = {
     price: "₹37,999",
     priceNumber: 37999,
     description: "AMO Electric Scooter Single Light Lead Acid Low Speed with 25kmph speed and 60-70 Km range. Non RTO compliant electric scooter in white color with portable charger for convenient urban mobility.",
-    image: "/ac/f.jpg",
+    image: "/ac/f.jpeg",
     specs: {
       motor: "BLDC Motor",
       battery: "Lead Acid Battery",
