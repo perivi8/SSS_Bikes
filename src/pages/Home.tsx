@@ -11,14 +11,14 @@ const Home = () => {
       id: "ampere-nexus-st",
       name: "Ampere Nexus ST High Performance Electric Scooter",
       price: "₹1,24,900",
-      image: "/ac/d.jpg",
+      image: "/ac/d.jpeg",
       description: "Powered by Greaves Electric Mobility, high performance family electric scooter with portable charger."
     },
     {
       id: "eox-e2", 
       name: "EOX E2 Low Speed Electric Scooter",
       price: "₹50,099",
-      image: "/ac/e.jpg",
+      image: "/ac/e.jpeg",
       description: "Non RTO electric scooter with 60-80Km range, red portable lithium battery and charger included."
     }
   ];

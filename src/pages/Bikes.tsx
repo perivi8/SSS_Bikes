@@ -33,7 +33,7 @@ const bikes = [
     name: "Ampere Nexus ST High Performance Electric Scooter",
     description: "Powered by Greaves Electric Mobility, high performance family electric scooter with portable charger.",
     price: "₹1,24,900",
-    image: "/ac/d.jpg",
+    image: "/ac/d.jpeg",
     category: "Electric Scooter",
   },
   {
@@ -41,7 +41,7 @@ const bikes = [
     name: "EOX E2 Low Speed Electric Scooter",
     description: "Non RTO electric scooter with 60-80Km range, red portable lithium battery and charger included.",
     price: "₹50,099",
-    image: "/ac/e.jpg",
+    image: "/ac/e.jpeg",
     category: "Electric Scooter",
   },
   {
@@ -49,7 +49,7 @@ const bikes = [
     name: "AMO Electric Scooter Single Light",
     description: "Lead acid low speed electric scooter with 25kmph speed, 60-70 Km range, Non RTO with portable charger.",
     price: "₹37,999",
-    image: "/ac/f.jpg",
+    image: "/ac/f.jpeg",
     category: "Electric Scooter",
   },
 ];
@@ -90,7 +90,7 @@ const Bikes = () => {
                   to={`/products/${bike.id}`}
                   className="group relative overflow-hidden rounded-xl border border-primary/20 dark:border-primary/30 bg-background-light dark:bg-background-dark transition-all hover:shadow-xl hover:scale-[1.02]"
                 >
-                  <div className="aspect-[4/3] overflow-hidden">
+                  <div className="aspect-[2/3] overflow-hidden">
                     <img
                       src={bike.image}
                       alt={bike.name}
