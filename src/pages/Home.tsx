@@ -8,18 +8,18 @@ import heroImage from "@/assets/hero-bike.jpg";
 const Home = () => {
   const products = [
     {
-      id: "ampere-nexus-st",
-      name: "Ampere Nexus ST High Performance Electric Scooter",
+      id: "sss-nexus-st",
+      name: "SSS Motors Nexus ST High Performance Electric Scooter",
       price: "₹1,24,900",
       image: "/ac/d.jpeg",
-      description: "Powered by Greaves Electric Mobility, high performance family electric scooter with portable charger."
+      description: "High performance SSS Motors family electric scooter with portable charger and advanced features."
     },
     {
-      id: "eox-e2", 
-      name: "EOX E2 Low Speed Electric Scooter",
+      id: "sss-e2-scooter", 
+      name: "SSS Motors E2 Low Speed Electric Scooter",
       price: "₹50,099",
       image: "/ac/e.jpeg",
-      description: "Non RTO electric scooter with 60-80Km range, red portable lithium battery and charger included."
+      description: "Non RTO SSS Motors electric scooter with 60-80Km range, red portable lithium battery and charger included."
     }
   ];
 

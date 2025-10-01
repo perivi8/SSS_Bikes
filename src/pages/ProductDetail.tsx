@@ -2,9 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ShoppingCart } from "lucide-react";
-import { toast } from "sonner";
-import { useCart } from "@/contexts/CartContext";
+import { ArrowLeft } from "lucide-react";
 
 interface Product {
   id: string;
@@ -25,12 +23,12 @@ interface Product {
 }
 
 const products: Record<string, Product> = {
-  "leader-e-power-l6": {
-    id: "leader-e-power-l6",
-    name: "Leader Unisex E-Power L6 Pro",
-    price: "₹18,999",
-    priceNumber: 18999,
-    description: "Leader Unisex E-Power L6 Pro 27.5T Electric Cycle with removable Li-Ion battery. Features high-performance 250W motor, dual disc brakes, and front suspension. Comes with 1 year warranty and suitable for 12+ years age group.",
+  "sss-e-power-l6": {
+    id: "sss-e-power-l6",
+    name: "SSS Motors E-Power L6 Pro Electric Scooter",
+    price: "₹25,999",
+    priceNumber: 25999,
+    description: "SSS Motors E-Power L6 Pro Electric Scooter with removable Li-Ion battery. Features high-performance 250W motor, dual disc brakes, and front suspension. Premium SSS Motors quality with 1 year warranty.",
     image: "/ac/a.jpg",
     specs: {
       motor: "250W High-Performance Motor",
@@ -41,20 +39,20 @@ const products: Record<string, Product> = {
       frameSize: "19 Inch"
     },
     features: [
+      "SSS Motors premium quality",
       "Removable Li-Ion battery",
       "Dual disc brakes",
       "Front suspension",
       "27.5T wheel size",
-      "1 year warranty",
-      "Suitable for 12+ years"
+      "1 year warranty"
     ]
   },
-  "ninety-one-zx": {
-    id: "ninety-one-zx",
-    name: "NINETY ONE ZX Electric Cycle",
-    price: "₹27,499",
-    priceNumber: 27499,
-    description: "NINETY ONE ZX Electric Cycle with 10.4Ah battery and 27.5T wheels. Features 91 Tuf Shox front suspension with 80mm travel, 250 Watt IP65 BLDC motor. Comes 85% pre-assembled with 2 years battery warranty.",
+  "sss-zx-electric": {
+    id: "sss-zx-electric",
+    name: "SSS Motors ZX Electric Scooter",
+    price: "₹35,499",
+    priceNumber: 35499,
+    description: "SSS Motors ZX Electric Scooter with 10.4Ah battery and advanced features. Premium SSS Motors engineering with front suspension, 250 Watt IP65 BLDC motor, and 2 years battery warranty.",
     image: "/ac/b.jpg",
     specs: {
       motor: "250W IP65 BLDC Motor",
@@ -62,23 +60,23 @@ const products: Record<string, Product> = {
       range: "Up to 50 km",
       topSpeed: "25 kmph",
       weight: "24 kg",
-      frameSize: "27.5T"
+      frameSize: "Standard"
     },
     features: [
+      "SSS Motors engineering",
       "10.4Ah high-capacity battery",
-      "91 Tuf Shox front suspension",
+      "Advanced front suspension",
       "80mm suspension travel",
       "IP65 rated motor",
-      "85% pre-assembled",
       "2 years battery warranty"
     ]
   },
-  "zeeta-plus-ic": {
-    id: "zeeta-plus-ic",
-    name: "Zeeta Plus IC Electric Bicycle",
-    price: "₹33,495",
-    priceNumber: 33495,
-    description: "Zeeta Plus IC Electric Bicycle with advanced features and modern design. Perfect for urban commuting with reliable performance, efficient battery system, and comfortable riding experience.",
+  "sss-plus-ic": {
+    id: "sss-plus-ic",
+    name: "SSS Motors Plus IC Electric Scooter",
+    price: "₹42,495",
+    priceNumber: 42495,
+    description: "SSS Motors Plus IC Electric Scooter with advanced features and modern design. Perfect for urban commuting with SSS Motors reliability, efficient battery system, and comfortable riding experience.",
     image: "/ac/c.jpg",
     specs: {
       motor: "250W Brushless Motor",
@@ -89,20 +87,20 @@ const products: Record<string, Product> = {
       frameSize: "Standard"
     },
     features: [
-      "Modern design",
+      "SSS Motors modern design",
       "Efficient battery system",
       "Comfortable riding position",
       "Urban commuting optimized",
-      "Reliable performance",
+      "Reliable SSS Motors performance",
       "Easy maintenance"
     ]
   },
-  "ampere-nexus-st": {
-    id: "ampere-nexus-st",
-    name: "Ampere Nexus ST High Performance Electric Scooter",
+  "sss-nexus-st": {
+    id: "sss-nexus-st",
+    name: "SSS Motors Nexus ST High Performance Electric Scooter",
     price: "₹1,24,900",
     priceNumber: 124900,
-    description: "Ampere Powered by Greaves Electric Mobility Nexus ST High Performance Family Electric Scooter with Portable Charger. Designed for modern families seeking reliable and efficient electric mobility with premium features and excellent build quality.",
+    description: "SSS Motors Nexus ST High Performance Family Electric Scooter with Portable Charger. Designed by SSS Motors for modern families seeking reliable and efficient electric mobility with premium features and excellent build quality.",
     image: "/ac/d.jpeg",
     specs: {
       motor: "BLDC Hub Motor",
@@ -113,20 +111,20 @@ const products: Record<string, Product> = {
       frameSize: "Standard"
     },
     features: [
-      "High performance BLDC motor",
+      "SSS Motors high performance BLDC motor",
       "Portable charger included",
       "Family-friendly design",
-      "Premium build quality",
+      "Premium SSS Motors build quality",
       "Digital instrument cluster",
       "LED lighting system"
     ]
   },
-  "eox-e2": {
-    id: "eox-e2",
-    name: "EOX E2 Low Speed Electric Scooter",
+  "sss-e2-scooter": {
+    id: "sss-e2-scooter",
+    name: "SSS Motors E2 Low Speed Electric Scooter",
     price: "₹50,099",
     priceNumber: 50099,
-    description: "EOX E2 Low Speed Electric Scooter Non RTO with 60-80Km Range. Features red portable lithium battery and charger for convenient charging. Perfect for city commuting without registration requirements.",
+    description: "SSS Motors E2 Low Speed Electric Scooter Non RTO with 60-80Km Range. Features red portable lithium battery and charger for convenient charging. Perfect SSS Motors solution for city commuting without registration requirements.",
     image: "/ac/e.jpeg",
     specs: {
       motor: "BLDC Motor",
@@ -137,20 +135,20 @@ const products: Record<string, Product> = {
       frameSize: "Compact"
     },
     features: [
-      "Non RTO registration",
+      "SSS Motors Non RTO design",
       "Portable lithium battery",
       "60-80 km range",
       "Low speed compliance",
       "Removable battery pack",
-      "Eco-friendly design"
+      "Eco-friendly SSS Motors technology"
     ]
   },
-  "amo-electric-scooter": {
-    id: "amo-electric-scooter",
-    name: "AMO Electric Scooter Single Light",
+  "sss-single-light": {
+    id: "sss-single-light",
+    name: "SSS Motors Single Light Electric Scooter",
     price: "₹37,999",
     priceNumber: 37999,
-    description: "AMO Electric Scooter Single Light Lead Acid Low Speed with 25kmph speed and 60-70 Km range. Non RTO compliant electric scooter in white color with portable charger for convenient urban mobility.",
+    description: "SSS Motors Single Light Electric Scooter with Lead Acid battery and 25kmph speed, 60-70 Km range. Non RTO compliant SSS Motors electric scooter with portable charger for convenient urban mobility.",
     image: "/ac/f.jpeg",
     specs: {
       motor: "BLDC Motor",
@@ -161,12 +159,12 @@ const products: Record<string, Product> = {
       frameSize: "Standard"
     },
     features: [
-      "Lead acid battery technology",
+      "SSS Motors lead acid battery technology",
       "25 kmph speed limit",
       "Non RTO compliance",
       "Portable charger",
       "Single light design",
-      "Affordable pricing"
+      "Affordable SSS Motors pricing"
     ]
   }
 };
@@ -174,7 +172,6 @@ const products: Record<string, Product> = {
 const ProductDetail = () => {
   const { productId } = useParams<{ productId: string }>();
   const product = productId ? products[productId] : null;
-  const { addItem } = useCart();
 
   if (!product) {
     return (
@@ -193,17 +190,6 @@ const ProductDetail = () => {
     );
   }
 
-  const handleAddToCart = () => {
-    if (product) {
-      addItem({
-        id: product.id,
-        name: product.name,
-        price: product.priceNumber,
-        image: product.image,
-      });
-      toast.success(`${product.name} added to cart!`);
-    }
-  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -237,7 +223,18 @@ const ProductDetail = () => {
                 {product.description}
               </p>
 
-              {/* Add to Cart button removed as requested */}
+              {/* Contact section for inquiries */}
+              <div className="mt-6 p-4 bg-primary/10 rounded-lg border border-primary/20">
+                <h3 className="text-lg font-semibold mb-2">Interested in this product?</h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Contact our team for more information, pricing details, and availability.
+                </p>
+                <Link to="/contact">
+                  <Button className="w-full sm:w-auto">
+                    Contact Us for Details
+                  </Button>
+                </Link>
+              </div>
 
               {/* Specifications */}
               <div className="mt-8">
